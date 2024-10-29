@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Recap ciclo for</title>
+    <link rel="stylesheet" href="./template/style.css">
+
+    <script type="text/javascript">
+
+        // dimmi in che posizione (la prima posizione è 0) si trova il numero 2 (se è presente più di una volta, dammi l'ultima)
+
+        const trovaIl2 = [0, 2, 4, 1, 2, 3, 6, 8, 2, 4, 5, 6, 2];
+
+        let lastIndex = -1   // imposto l'indice a -1, così da poter scorrere tutto l'array, cioè come se non fosse stato ancora trovato
+
+        for (let i = 0; i < trovaIl2.length; i++) {
+            const currentNumber = trovaIl2[i];
+
+            if (currentNumber === 2) {
+                lastIndex = i  // l'ultimo indice trovato è corrispondente al numero corrente se è uguale a 2
+            }
+        }
+
+        console.log('l\'ultima posizione è:', `${lastIndex}`)
+
+        // function findLastItemInArray(array, item) {
+        //     let lastIndex = -1
+
+        //     for (let i = 0; i < array.length; i++) {
+        //         const currentNumber = array[i];
+
+        //         if (currentNumber === item) {
+        //             lastIndex = i
+        //         }
+        //     }
+        //     return lastIndex
+        // }
+
+        // const findLastNum2InArray = findLastItemInArray(trovaIl2, 2) // 12
+        // const findLastdogInArray = findLastItemInArray(['cane', 'gatto', 'topo', 'gatto', 'cane', 'topo'], 'cane') // 4
+        // console.log(findLastNum2InArray, findLastdogInArray)
+
+        const findLastItemInArray = (array, item) => {
+            let lastIndex = -1
+
+            for (let i = 0; i < array.length; i++) {
+                const currentNumber = array[i];
+
+                if (currentNumber === item) {
+                    lastIndex = i
+                }
+            }
+            return lastIndex
+        }
+        const lastIndexof = findLastItemInArray(trovaIl2, 2)
+        console.log(lastIndexof)
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="menu bg-light p-1 text-left">
+        <h2>Recap ciclo for e array</h2>
+    </div>
+    <div class="container py-2 text-center">
+        <p>Troviamo in che posizione (la prima posizione è 0) si trova il numero 2 (se è presente più di una volta,
+            indichiamo l'ultima)</p>
+    </div>
+
+    <div class="logo-recap">
+        <span class="brackets">
+            [
+        </span>
+        <span class="text">
+            Recap
+        </span>
+        <span class="brackets">
+            ]
+        </span>
+    </div>
+
+</body>
+
+</html>
